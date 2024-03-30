@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8696971;
+}
+
+#game-container {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 400px;
+    border: 10px solid #7805d691;
+}
+
+#background {
+    display: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/fondo2.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: backgroundMove 30s linear infinite;
+}
+
+#player {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 85px;
+    height: 55px;
+    
+}
+
+#player img{
+    width: 100%;
+    height: 100%;
+}
+
+.playerJump {
+    animation: playerJump 1s linear;
+}
+
+@keyframes playerJump {
+    0% {
+        bottom: 10px;
+    }
+    45%, 55% {
+        bottom: 120px;
+    }   
+}
+
+@keyframes backgroundMove {
+    from { 
+        background-position: 0 0; 
+    }
+    to { 
+        background-position: -10000px 0; 
+    } 
+}
+
+#sombrilla {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: 5px;
+    right: 0;
+    animation: sombrillaMove 2s linear infinite;
+}
+
+#sombrilla img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes sombrillaMove {
+    0% { 
+        right: 0; 
+    }
+    100% { 
+        right: 100%; 
+    } 
+}
+
+.scorecContainer {
+    position: absolute;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    
+}
+
+.button{
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 1000ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0px 0px 60px; 
+}
+
+.button.play{
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.button:hover{
+    border-color: transparent transparent transparent #404040;
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    right: 0;
+}

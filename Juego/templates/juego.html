@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="background">
+            <div class="scoreContainer">
+                Score: <span id="score">0</span>
+            </div>
+            <div class="menu">
+                <button id="buttonPlayStop" class="button"></button>
+                <button id="restartGame" class="">Reiniciar</button>
+            </div>
+        </div>
+        <div id="player">
+            <img src="{% static 'img/Cinnamoroll.png' %}" alt="player">
+        </div>
+        <div id="sombrilla">
+            <img src="{% static 'img/sombrilla.png' %}" alt="sombrilla">
+        </div>
+    </div>
+    <script src="{% static 'js/jueguito.js' %}"></script>
+</body>
+
+</html>
